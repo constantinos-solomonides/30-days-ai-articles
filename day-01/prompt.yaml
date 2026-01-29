@@ -1,59 +1,64 @@
+series:
+  theme: Using AI in article writing and development for 30 days as an experiment
+  cadence: Daily
+  audience:
+    profile: Technically literate, AI-aware, skeptical
+    assumed_knowledge:
+      - Familiarity with AI-assisted work
+      - Familiarity with software or knowledge work
 
-details:
-  series:
-    theme: Using AI in article writing and development for 30 days as an experiment
-    cadence: One article per day, published sequentially
-    audience: Technically literate readers curious but skeptical about AI-assisted work
+article:
+  day: 01
 
-  article:
-    day: 01
-    title:
-      prefix: "Day 01"
-      guidance:
-        - Reflective, not promotional
-        - Hints at uncertainty or constraint rather than outcomes
+  identity:
+    title_prefix: "Day 01"
     theme: Motivation for the experiment and how it will be conducted
 
-    intent:
-      - Explain *why* the experiment exists before *what* it produces
-      - Establish credibility without authority claims
-      - Make the process inspectable and falsifiable
+  purpose:
+    - Explain why the experiment exists before showing results
+    - Make AI usage explicit and inspectable
+    - Establish credibility through transparency, not claims
 
-    content:
-      motivations:
-        - Build deeper expertise in *correct* AI usage, not maximal usage
-        - Create portfolio artifacts where AI involvement is explicit and reviewable
-        - Re-implement scaled-down versions of past professional tools to test transferability
+  content:
+    motivations:
+      - Build deeper expertise in correct AI usage
+      - Create portfolio artifacts with visible AI involvement
+      - Re-implement scaled-down versions of prior professional tools
 
-      experiment_rules:
-        - Apply the Pareto principle: AI produces ~80% of the draft, human refines the rest
-        - All core ideas and constraints originate from the author
-        - This document serves as a living spec and may evolve across days
-        - Use the paid OpenAI tier to mirror common corporate defaults
+    experiment_rules:
+      - Apply a Pareto-style split: AI drafts, human refines
+      - All core ideas originate from the author
+      - This document acts as a living specification
+      - Use paid OpenAI access to mirror corporate defaults
 
-      transparency_requirements:
-        - Explicitly state where AI was helpful and where it was not
-        - Avoid implying productivity gains without evidence
-        - Treat failures or friction as valid outcomes
+    transparency:
+      expectations:
+        - State where AI helps and where it does not
+        - Avoid unqualified productivity claims
+        - Treat friction and failure as valid outcomes
 
-      inclusions:
-        repository:
-          purpose: Full audit trail of AI-assisted writing
-          must_contain:
-            - The RIS governing the article
-            - This prompt file (or its versioned equivalent)
-            - Initial AI-generated draft (linked via commit history)
-            - Final edited article
-            - Reusable daily article template
+meta:
+  writing:
+    format: Markdown
+    governing_ruleset: RIS v2.1
+    tone:
+      - Conversational
+      - Reflective
+      - Non-authoritative
 
-      required_sections:
-        - References:
-            goals:
-              - Define non-obvious terms
-              - Link supporting articles
-              - Link directly to relevant repository commits
+  structure:
+    artifacts:
+      repository:
+        intent: Provide a full audit trail
+        includes:
+          - Writing RIS
+          - Prompt file(s)
+          - Initial AI-generated draft (via commit history)
+          - Final edited article
+          - Reusable daily article template
 
-instructions:
-  - Generate an appropriate title consistent with the above guidance
-  - Write the article in markdown
-  - Apply the provided RIS exactly when generating the article
+    references:
+      goals:
+        - Explain non-obvious terms when ambiguity exists
+        - Link relevant articles
+        - Link directly to repository commits
