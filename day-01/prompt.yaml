@@ -1,28 +1,59 @@
-details on article:
-    series theme: Using AI in article and development for 30 days as an experiment
-    title prefix: day 01
-    article theme: Motivation for the experiment and ways it will be run
-    article contents:
-        motivations:
-            - Build better expertise on correctly using AI
-            - Build part of my portfolio using AI
-            - Showcase work I did in the past for employers by re-implementing a scaled-down version of tools
-        rules for the experiment:
-            - Use the pareto principle, meaning invest 20% of the effort to let AI take me 80% of the way, then edit
-            - The ideas *must* come from me
-            - A document like this will be the basis for the work, will be updated
-            - I will be using the paid version of OpenAI, as the paid version is default in the corporate world
-        what to include:
-            - A link to a git repository containing:
-                - The RIS provided for the writing of the article 
-                - This prompt file
-                - The initial file produced by the AI as a link in the commit history
-                - The final result after my edits
-                - The template to create the day-to-day articles
-        important sections:
-            - References
-                - Explain terms that may not be widely known
-                - link articles and direct links to the commits in the repository
+
+details:
+  series:
+    theme: Using AI in article writing and development for 30 days as an experiment
+    cadence: One article per day, published sequentially
+    audience: Technically literate readers curious but skeptical about AI-assisted work
+
+  article:
+    day: 01
+    title:
+      prefix: "Day 01"
+      guidance:
+        - Reflective, not promotional
+        - Hints at uncertainty or constraint rather than outcomes
+    theme: Motivation for the experiment and how it will be conducted
+
+    intent:
+      - Explain *why* the experiment exists before *what* it produces
+      - Establish credibility without authority claims
+      - Make the process inspectable and falsifiable
+
+    content:
+      motivations:
+        - Build deeper expertise in *correct* AI usage, not maximal usage
+        - Create portfolio artifacts where AI involvement is explicit and reviewable
+        - Re-implement scaled-down versions of past professional tools to test transferability
+
+      experiment_rules:
+        - Apply the Pareto principle: AI produces ~80% of the draft, human refines the rest
+        - All core ideas and constraints originate from the author
+        - This document serves as a living spec and may evolve across days
+        - Use the paid OpenAI tier to mirror common corporate defaults
+
+      transparency_requirements:
+        - Explicitly state where AI was helpful and where it was not
+        - Avoid implying productivity gains without evidence
+        - Treat failures or friction as valid outcomes
+
+      inclusions:
+        repository:
+          purpose: Full audit trail of AI-assisted writing
+          must_contain:
+            - The RIS governing the article
+            - This prompt file (or its versioned equivalent)
+            - Initial AI-generated draft (linked via commit history)
+            - Final edited article
+            - Reusable daily article template
+
+      required_sections:
+        - References:
+            goals:
+              - Define non-obvious terms
+              - Link supporting articles
+              - Link directly to relevant repository commits
+
 instructions:
-    - Generate an appropriate title
-    - Write the article in markdown format
+  - Generate an appropriate title consistent with the above guidance
+  - Write the article in markdown
+  - Apply the provided RIS exactly when generating the article
