@@ -59,11 +59,12 @@ Skepticism is enforced through:
 The repository is intentionally structured so that **process is visible**, not just results.
 
 ### Branches:
-| name | Purpose                                                                |
-| ---- | ---------------------------------------------------------------------- |
-| main | Trunk branch, contains shared files and final versions of everything   |
-| ris  | Tracks the evolution of the RIS document, defining the writing style   |
-| dayN | Tracks step-by-step updates of each day's progress                     |
+| name      | Purpose                                                                |
+| --------- | ---------------------------------------------------------------------- |
+| main      | Trunk branch, contains shared files and final versions of everything   |
+| ris       | Tracks the evolution of the RIS document, defining the writing style   |
+| dayN      | Tracks step-by-step updates of each day's progress                     |
+| templates | Tracks templates, and updates therein                                  |
 
 
 ### File and directory structure
@@ -83,8 +84,14 @@ The repository is intentionally structured so that **process is visible**, not j
  |      +- linked_in-NN.md
  |
  +- .ci/
-       +- validate_series.py
-       +- validator-config.yml
+ |     +- validate_series.py
+ |     +- validator-config.yml
+ |
+ +- templates/
+             + template-experiment-reflective-piece.yaml
+             + template-opinion-piece.yaml
+             + template-portfolio-showcase-piece.yaml
+             + template-portfolio-update-piece.yaml
 ```
 
 - `LICENSE.md`
@@ -122,6 +129,21 @@ The repository is intentionally structured so that **process is visible**, not j
 
 - `.ci/validator-config.yml` (TBC)
     The CI/CD script used to automatically validate the contents
+
+- `templates/`
+    File storing templates for use in writing day-to-day articles per type
+
+- `templates/template-experiment-reflective-piece.yaml`
+    Template for articles on thoughts on the experiment
+
+- `templates/template-opinion-piece.yaml`
+    Template for opinion-piece articles
+
+- `templates/template-portfolio-showcase-piece.yaml`
+    Template for articles meant to showcase functionality of the portfolio projects
+
+- `templates/template-portfolio-update-piece.yaml`
+    Template for articles that are updates on the portfolio projects
 
 ---
 

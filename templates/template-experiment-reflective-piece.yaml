@@ -1,0 +1,33 @@
+article:
+  identity:
+    day: <DAY_NUMBER>
+    type: process_reflection
+    title_prefix: "Day <DAY_NUMBER>"
+    theme: Reflections on the AI-assisted workflow
+
+  disclosure:
+    mandatory: true
+    placement: after_tldr
+    wording: canonical_frozen
+
+  intent:
+    primary:
+      - Reflect on what changed since earlier entries
+      - Identify emerging patterns or failures
+
+  content:
+    observations: []
+    surprises: []
+    adjustments_made: []
+
+meta:
+  writing:
+    format: markdown
+    governing_ruleset: RIS_v2_2
+    tone:
+      - reflective
+      - cautious
+      - non_definitive
+
+  linkedin_shortening:
+    required: true
