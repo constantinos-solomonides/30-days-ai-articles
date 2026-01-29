@@ -1,1 +1,33 @@
-git show 7062da1fed60d4fa1c42b111cb0e8c93a6e72fb3:30_days_ai/template-experiment-reflective-piece.yaml
+article:
+  identity:
+    day: <DAY_NUMBER>
+    type: process_reflection
+    title_prefix: "Day <DAY_NUMBER>"
+    theme: Reflections on the AI-assisted workflow
+
+  disclosure:
+    mandatory: true
+    placement: after_tldr
+    wording: canonical_frozen
+
+  intent:
+    primary:
+      - Reflect on what changed since earlier entries
+      - Identify emerging patterns or failures
+
+  content:
+    observations: []
+    surprises: []
+    adjustments_made: []
+
+meta:
+  writing:
+    format: markdown
+    governing_ruleset: RIS_v2_2
+    tone:
+      - reflective
+      - cautious
+      - non_definitive
+
+  linkedin_shortening:
+    required: true

@@ -1,1 +1,65 @@
-git show 7062da1fed60d4fa1c42b111cb0e8c93a6e72fb3:30_days_ai/template-opinion-piece.yaml
+series:
+  name: 30-days-ai-articles
+  ai_stance: skeptical_tool_user
+
+article:
+  identity:
+    day: <DAY_NUMBER>
+    type: reflective_opinion
+    title_prefix: "Day <DAY_NUMBER>"
+    theme: <HIGH_LEVEL_TOPIC>
+
+  disclosure:
+    mandatory: true
+    placement: after_tldr
+    wording: canonical_frozen
+
+  intent:
+    primary:
+      - Explore a reasoning problem or tension
+      - Introduce a reusable mental model
+    secondary:
+      - Demonstrate disciplined AI usage without hype
+
+  content:
+    problem_context:
+      - What uncertainty, tension, or question motivates the article
+    perspective:
+      - Why this problem is non-trivial or often misunderstood
+
+  framework:
+    name: <FRAMEWORK_NAME>
+    metaphor: <SINGLE_CONSISTENT_METAPHOR>
+    components:
+      - name: <COMPONENT_1>
+        includes: []
+        excludes: []
+        cost_of_ignoring: <CONSEQUENCE>
+      - name: <COMPONENT_2>
+        includes: []
+        excludes: []
+        cost_of_ignoring: <CONSEQUENCE>
+
+  application:
+    scenario:
+      description: <REALISTIC_CONCRETE_EXAMPLE>
+      alternatives_considered:
+        - <SIMPLER_OR_CHEAPER_OPTION>
+      tradeoffs:
+        - <TRADEOFF_1>
+        - <TRADEOFF_2>
+
+meta:
+  writing:
+    format: markdown
+    governing_ruleset: RIS_v2_2
+    tone:
+      - conversational
+      - reflective
+      - skeptical
+
+  linkedin_shortening:
+    required: true
+    variants:
+      - short
+      - medium
