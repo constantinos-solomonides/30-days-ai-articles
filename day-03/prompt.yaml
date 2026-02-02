@@ -1,0 +1,101 @@
+prompt:
+  type: development_review
+  day: 03
+  experiment: "30 day AI experiment"
+  conversation_name: "30 day AI experiment – day 03"
+
+  repository:
+    url: "https://github.com/constantinos-solomonides/pytest-framework-example"
+    role: "tracking artifacts, experiments, and reference implementations"
+
+  source_context:
+    scope:
+      - docker-based vim sandbox
+      - ai-assisted development
+      - local llm via sidecar containers
+      - agentic iteration inside containers
+    constraints:
+      - no direct host filesystem exposure
+      - persistence via bind-mounted directories, not docker volumes
+      - non-root user inside containers
+      - UID/GID alignment with host where possible
+      - avoid unsupervised or hanging execution
+
+  parsed_notes:
+    methodology:
+      - "DID NOT import prior efforts to create an environment"
+      - "DID use knowledge gained during two previous attempts"
+      - "DID re-use the instructions given on the 2nd day with updates"
+
+    technical_issues:
+      - "UID handling is unsafe to set directly; UID is system-defined and read-only"
+      - "GID usage acceptable; UID needs reconsideration under 20/80 rule"
+      - "Directory /usr/share/vim/vimfiles/autoload/ does not exist on Debian-based images"
+      - "Bind-mounting an empty directory masked pre-installed vim configuration"
+      - "Autoload semantics in Vim were misunderstood; exists('*func') is not a valid autoload check"
+      - "vim-plug bootstrap and runtimepath ordering caused repeated failures"
+      - "PlugInstall did not create 'plugged' directory due to sentinel logic and masked mounts"
+
+    process_observations:
+      - "Several fixes required manual intervention"
+      - "Solutions often emerged only after copying exact error output"
+      - "Unsupervised execution paths would have left the system hanging"
+
+    evaluation:
+      effort_assessment:
+        - "Effort aligns with 20/80 rule for a first run"
+        - "No significant improvement over reusing existing boilerplate"
+      disadvantages:
+        - "Required navigating an unfamiliar setup compared to existing workflow"
+      advantages:
+        - "Provided learning opportunities and exposure to alternative approaches"
+
+  interaction_summary:
+    assistant_role:
+      - "Generated initial Docker/Vim/AI sandbox scaffold"
+      - "Proposed architectural options for persistence and seeding"
+      - "Diagnosed Vim, vim-plug, and autoload issues step-by-step"
+      - "Provided verification and debugging procedures"
+    user_role:
+      - "Identified concrete runtime and build errors"
+      - "Corrected incorrect assumptions (autoload, UID safety, filesystem layout)"
+      - "Applied fixes manually when automation fell short"
+      - "Evaluated outcome critically against existing boilerplate"
+
+  article_objective:
+    goal: >
+      Produce a reflective development review describing the attempt to build
+      an AI-assisted Vim sandbox, focusing on practical friction, architectural
+      trade-offs, debugging reality, and whether the outcome justified deviation
+      from existing tooling.
+    tone:
+      - technical
+      - critical
+      - pragmatic
+      - experience-driven
+    audience:
+      - senior engineers
+      - developers experimenting with AI-assisted workflows
+      - readers interested in containerized dev environments
+
+  required_sections:
+    - introduction
+    - initial_goals_and_constraints
+    - implementation_attempt
+    - issues_and_failures
+    - debugging_and_corrections
+    - evaluation_against_existing_boilerplate
+    - lessons_learned
+    - next_steps
+
+  output_requirements:
+    format: markdown
+    length: medium
+    avoid:
+      - marketing tone
+      - exaggerated success claims
+      - hiding manual intervention
+    emphasize:
+      - real failure modes
+      - cost vs benefit
+      - learning value over polish
