@@ -1,1 +1,3 @@
-*.md filter=no_end_ws
+*.md filter=anonymize
+*.yaml filter=anonymize
+*.yml filter=anonymize
