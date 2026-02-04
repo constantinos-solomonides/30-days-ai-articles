@@ -1,9 +1,9 @@
-AI Day 04 — I did everything right.
+AI Day 04 - I did everything right and still failed.
 It still failed.
 
 No bugs.
 No misconfigurations.
-No hidden “gotchas”.
+No hidden "gotchas".
 
 Still blocked. ⚠️
 
@@ -12,12 +12,12 @@ Local models worked.
 OpenAI integration worked.
 Codex launched.
 
-And yet, I couldn’t get a sandboxed agent to actually run.
+And yet, I couldn't get a sandboxed agent to actually run.
 
 Once you go AI-first, correctness is no longer enough.
 Availability, billing ambiguity, and incentives start to dominate.
 
-I could have bypassed the AI and continued manually. I didn’t.
+I could have bypassed the AI and continued manually. I didn't.
 Letting the AI be a blocker was part of the test.
 
 Two uncomfortable takeaways came out of this:
@@ -25,7 +25,7 @@ Two uncomfortable takeaways came out of this:
 – When AI is unavailable and no agent can resume work, progress can stop harder than when the internet is down. At least then, man pages still work.
 – Agentic tools are built by people incentivized to make them run more. Humans tend to optimize for economy of effort and predictability. Those incentives point in opposite directions.
 
-Day 04 wasn’t about broken infrastructure.
+Day 04 wasn't about broken infrastructure.
 It was about failing while doing everything right.
 
 Full article
