@@ -91,7 +91,7 @@ This is not an ideological shift but a pragmatic one. The goal is to understand 
 
 ---
 
-## Day 04 results evaluation
+## Day 04 results summary
 Day 04 did not produce a flashy demo. Ollama worked, code was generated successfully, much joy was had, and that was that. An agent didn't run. I did not gain a containerized assistant and the sample framework is not closer to being agentically developed.
 
 The successes were a validated sandbox, a confirmed local baseline, and a clearer understanding of what "AI-first" actually implies in practice.
@@ -101,12 +101,9 @@ Sometimes the most useful result is identifying which path **not** to continue d
 ---
 
 ## Links
-- **Experiment repository:**
-  https://github.com/constantinos-solomonides/pytest-framework-example
-- **Articles & prompts repository:**
-  https://github.com/constantinos-solomonides/30-days-ai-articles
-- **Date-limited search about the outage:**
-  https://duckduckgo.com/?q=chatgpt+down&df=2026-02-02..2026-02-03&t=ffab&atb=v264-1&ia=web
+- **Experiment repository on** [**github**](https://github.com/constantinos-solomonides/pytest-framework-example)
+- **Articles & prompts repository on **  [**github**](https://github.com/constantinos-solomonides/30-days-ai-articles)
+- [**Date-limited search about the outage**](https://duckduckgo.com/?q=chatgpt+down&df=2026-02-02..2026-02-03&t=ffab&atb=v264-1&ia=web)
 - **Top result from that search:**
   [ChatGPT back up after a brief outage, Downdetector shows — Reuters](https://www.reuters.com/technology/chatgpt-down-thousands-users-us-downdetector-shows-2026-02-03/?utm_source=chatgpt.com)
 - **Second result from that search:**
