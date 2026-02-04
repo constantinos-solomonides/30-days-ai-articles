@@ -1,6 +1,8 @@
 project: ai_experiment
 conversation: "30 day AI experiment - day 04"
 phase: "sandbox experimentation → article writing"
+meta:
+    - emphasize that articles are written using AI, trying to hit 20/80 mark
 
 objectives:
   - Continue work from Day 03 sandbox environment
@@ -94,19 +96,29 @@ significant_results:
         The billing interface showed hourly caps as available while actual
         usable credits were zero, leading to misleading signals during debugging.
 
+the_paradox_of_sandboxing:
+    problem_statement: A sandbox is needed to be safe when using the agent, without the agent, setting up a sandbox is more complicated
+    reasoning: This is part of the experiment, the choices should not be "trust blindly or don't use"
+    benefits_of_solving:
+        - The next iteration can start from a sandboxed environment and iterate using that
+        - The 20/80 rule means that the 20 can be accounted over multiple reuses
+
 evaluation:
   agentic_openai_approach:
     outcome: failed
     reason:
-      - requires upfront payments
+      - requires upfront payments OR
       - introduces risk of runaway costs
   next_direction:
-    - prioritize free and open-source models
+    - use free and open-source models
     - explore open-source agent frameworks
     - attempt the same agentic workflows without paid APIs
+    - expectation for cost to shift in time and processing power
+    - Even for big corporations, the datacenter would need to grow inversely proportional to headcount
 
 decisions_made:
-  - Accept Codex container as dormant until credits exist
+  - Accept Codex container as dormant
+  - Credits requirement only prevents evaluation for *this* experiment
   - Use Ollama as default inference backend
   - Defer OpenAI-based agentic workflows
   - Pivot toward free / open-source agents
@@ -125,3 +137,6 @@ notes_for_future_articles:
   - Highlight how outages and billing UX can dominate engineering time
   - Emphasize fragility of AI-first workflows with external dependencies
   - Position sandboxing as valuable even when upstream services fail
+
+next_article:
+    topic: Experimentation with open source and free local agents
