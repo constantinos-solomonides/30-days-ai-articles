@@ -1,6 +1,18 @@
 # How an Agent Burns 1–2 Million Tokens a Day
 ## A concrete breakdown, not a pricing scare story
 
+---
+
+**NOTE** This is written by ChatGPT, following the prompt:
+
+```
+Previously in the conversation you stated that it would cost approximately 1-2M tokens per 8-hour days to run an agent in a loop until it converges to create software. Explain your reasoning and show your work.
+```
+
+There was **NO** human involvement in it's writing, other than adding this note. So "I" in the text below, is first-person for ChatGPT, not a human being
+
+---
+
 This article exists because “tokens” are often discussed abstractly, while agentic workflows consume them very concretely.
 
 When I previously stated that **running an agent in a loop for a full working day can consume ~1–2 million tokens**, that was not a slogan. It was an order-of-magnitude estimate derived from how agents actually behave once you stop demoing and start iterating.
