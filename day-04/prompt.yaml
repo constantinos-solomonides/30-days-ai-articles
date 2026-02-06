@@ -1,0 +1,142 @@
+project: ai_experiment
+conversation: "30 day AI experiment - day 04"
+phase: "sandbox experimentation → article writing"
+meta:
+    - emphasize that articles are written using AI, trying to hit 20/80 mark
+
+objectives:
+  - Continue work from Day 03 sandbox environment
+  - Integrate multiple AI backends in an isolated Docker-based setup
+  - Validate Ollama, OpenAI, and Codex CLI integration
+  - Keep infrastructure correct even if services are inactive (no credits)
+
+day_03_actual_goals:
+  - Verify that Ollama works reliably for local inference
+  - Add an agent container to enable full automation
+  - Check whether OpenAI can be integrated into the sandbox
+
+global_rules:
+  ris:
+    status: closed
+    applied:
+      - article_writing_ris_latest
+      - code_development_ris_latest
+  pii_handling:
+    rule_active: true
+    behavior:
+      - immediately report detected PII
+      - avoid propagating secrets unless explicitly instructed
+    note: user explicitly allowed proceeding despite API key exposure during debugging
+
+sandbox_context:
+  base_from_day: 03
+  architecture:
+    - vim container (primary UI)
+    - ollama container (local LLM inference)
+    - codex container (OpenAI Codex CLI sidecar)
+  constraints:
+    - no Docker volumes (bind-mounted directories only)
+    - UID/GID inside containers must match host user
+    - sandboxed filesystem access
+    - sidecar pattern for AI tools
+
+ollama_status:
+  issue:
+    - initial model load timeout
+  resolution:
+    - root cause: client-side timeout during cold start
+    - verification: all models respond when called directly
+  outcome: working and stable
+
+openai_integration:
+  api_key:
+    configured_via_env: true
+    propagation: docker-compose environment variables
+  network_debugging:
+    curl_root_endpoint: HTTP 421 (ignored)
+    curl_v1_authenticated: success
+    conclusion: connectivity correct
+  billing_status:
+    credits: 0
+    billing_ui_behavior:
+      - hour caps displayed as available
+      - no usable credits present
+    result:
+      - authentication works
+      - all generation requests rejected
+    decision: no further debugging required
+
+codex_integration:
+  cli_version: 0.94.0
+  container_status:
+    build: correct
+    permissions: verified
+    workspace_access: verified
+    auth_status: logged in using API key
+  runtime_behavior:
+    launches_successfully: true
+    model_default: gpt-5.1-codex-mini
+    generation_attempts: blocked
+    error: quota exceeded
+  conclusion:
+    - infrastructure correct
+    - blocked solely by API credits
+    - no code or config changes required when credits are added later
+
+significant_results:
+  - openai_outage:
+      description: >
+        An OpenAI outage blocked progress during Day 03/04, which was critical
+        because the experiment is intentionally AI-first.
+      evidence:
+        search_link: "https://duckduckgo.com/?q=chatgpt+down&df=2026-02-02..2026-02-03&t=ffab&atb=v264-1&ia=web"
+        action_required: find and link relevant outage articles from this search
+  - billing_confusion:
+      description: >
+        The billing interface showed hourly caps as available while actual
+        usable credits were zero, leading to misleading signals during debugging.
+
+the_paradox_of_sandboxing:
+    problem_statement: A sandbox is needed to be safe when using the agent, without the agent, setting up a sandbox is more complicated
+    reasoning: This is part of the experiment, the choices should not be "trust blindly or don't use"
+    benefits_of_solving:
+        - The next iteration can start from a sandboxed environment and iterate using that
+        - The 20/80 rule means that the 20 can be accounted over multiple reuses
+
+evaluation:
+  agentic_openai_approach:
+    outcome: failed
+    reason:
+      - requires upfront payments OR
+      - introduces risk of runaway costs
+  next_direction:
+    - use free and open-source models
+    - explore open-source agent frameworks
+    - attempt the same agentic workflows without paid APIs
+    - expectation for cost to shift in time and processing power
+    - Even for big corporations, the datacenter would need to grow inversely proportional to headcount
+
+decisions_made:
+  - Accept Codex container as dormant
+  - Credits requirement only prevents evaluation for *this* experiment
+  - Use Ollama as default inference backend
+  - Defer OpenAI-based agentic workflows
+  - Pivot toward free / open-source agents
+  - Stop Day 04 experimentation once root causes were identified
+
+current_mode:
+  status: article_writing
+  scope:
+    - summarize experimentation outcomes
+    - analyze dependency risks of AI-first workflows
+    - contrast paid vs free agentic approaches
+    - no further sandbox debugging unless explicitly reopened
+
+notes_for_future_articles:
+  - Separate infrastructure correctness from service availability
+  - Highlight how outages and billing UX can dominate engineering time
+  - Emphasize fragility of AI-first workflows with external dependencies
+  - Position sandboxing as valuable even when upstream services fail
+
+next_article:
+    topic: Experimentation with open source and free local agents

@@ -1,0 +1,2 @@
+- AI experiment impacted by OpenAI outage: https://duckduckgo.com/?q=chatgpt+down&df=2026-02-02..2026-02-03&t=ffab&atb=v264-1&ia=web
+    - AI coding is more susceptible to connectivity / service outage issues than regular coding
